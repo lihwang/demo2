@@ -1,0 +1,221 @@
+.layout #header {
+  height: 50px;
+  width: 100%;
+  background-color: #FF841D;
+  overflow: hidden;
+  border-bottom: 1px solid #e6e6e6;
+}
+.layout #header .header_logo {
+  height: 100%;
+}
+.layout #header .header_logo img {
+  padding: 12px;
+  max-height: 25px;
+  overflow: hidden;
+}
+.layout #header .header_app img {
+  padding: 8px;
+  max-height: 34px;
+  overflow: hidden;
+}
+.layout #search {
+  background-color: #fff;
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.layout #search input[name=search] {
+  height: 30px;
+  width: 90%;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 15px;
+  padding-left: 5%;
+  background-color: #F1F1F1;
+  outline: none;
+}
+.layout #search #inquire {
+  height: 30px;
+  width: 63px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #ff841d;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  outline: none;
+}
+.layout .bread {
+  padding-left: 10px;
+  height: 38px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #ebebeb;
+  line-height: 38px;
+  font-size: 14px;
+}
+.layout .bread a {
+  color: #5a5a5a;
+}
+.layout .pro-introduce {
+  background: white;
+}
+.layout .pro-introduce .pro-detail {
+  padding: 10px;
+  position: relative;
+}
+.layout .pro-introduce .pro-detail h3 {
+  font-size: 17px;
+  font-weight: normal;
+  text-align: center;
+  color: black;
+}
+.layout .pro-introduce .pro-detail .detail-pic img {
+  margin: 0 auto;
+}
+.layout .pro-introduce .pro-detail .detail-collect {
+  position: absolute;
+  bottom: 0;
+  background: #72ab1a;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 25px;
+}
+.layout .pro-introduce .pro-detail .detail-collect a {
+  color: white;
+  font-size: 14px;
+}
+.layout .pro-introduce .tab {
+  margin-top: 20px;
+}
+.layout .pro-introduce .tab ul {
+  width: 100%;
+}
+.layout .pro-introduce .tab ul li {
+  box-sizing: border-box;
+  width: 33.333%;
+  float: left;
+  height: 32px;
+  background: #ffbb00;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: white;
+  border: 1px solid #c14d00;
+  border-left: none;
+}
+.layout .pro-introduce .tab ul li:first-child {
+  background: #ff9000;
+}
+.layout .pro-introduce .tab ul li:last-child {
+  border-right: none;
+}
+.layout .pro-introduce .purchase {
+  font-size: 16px;
+  margin-top: 10px;
+  color: black;
+}
+.layout .pro-introduce .purchase .p_pic a img {
+  margin: 4px auto ;
+}
+.layout .pro-introduce .purchase a {
+  color: black;
+}
+.layout .pro-introduce .purchase .red {
+  text-align: right;
+  box-sizing: border-box;
+  padding-right: 15px;
+  color: #d10311;
+}
+.layout .pro-introduce .warn {
+  border-top: 1px solid #ccc;
+  padding: 10px 6px 20px 6px;
+  border-bottom: 5px solid #666;
+}
+.layout .pro-introduce .comment-title {
+  margin-top: 1px;
+  text-align: center;
+  line-height: 40px;
+  background: linear-gradient(45deg, #ffffff, #000000, #ffffff);
+  font-size: 16px;
+  color: white;
+}
+.layout .pro-introduce .comment-content li {
+  padding: 10px 6px 6px 6px;
+  border-bottom: 1px solid #ccc;
+}
+.layout .pro-introduce .comment-content li .words {
+  margin-top: 8px;
+  line-height: 25px;
+  color: black;
+}
+.layout #footer > h2 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  height: 35px;
+  font-weight: bold;
+  line-height: 35px;
+  background-color: #ff9000;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  position: relative;
+}
+.layout #footer > h2 a {
+  display: block;
+  height: 100%;
+}
+.layout #footer > h2 a span {
+  display: inline-block;
+  line-height: 35px;
+  font-size: 18px;
+  color: #fff;
+  margin-left: 18px;
+}
+.layout #footer > h2 a img {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+.layout #footer .foot_nav {
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+.layout #footer .foot_nav .login {
+  box-sizing: border-box;
+  width: 30%;
+  border-right: 1px solid #c4c4c4;
+}
+.layout #footer .foot_nav .register {
+  box-sizing: border-box;
+  width: 30%;
+  border-right: 1px solid #c4c4c4;
+}
+.layout #footer .foot_nav .back_top {
+  width: 40%;
+}
+.layout #footer .foot_nav .back_top img {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.layout #footer .footer_bottom {
+  padding: 15px 0;
+  text-align: center;
+}
+.layout #footer .footer_bottom .app_name a {
+  color: Red;
+}

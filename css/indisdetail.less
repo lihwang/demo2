@@ -1,0 +1,287 @@
+      * {
+          box-sizing: border-box;
+      }
+      
+      body {
+          background: white;
+          min-width: 320px;
+          // font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+      }
+      
+      @mainColor: #ff841d;
+      .layout {
+          // 顶部
+          background-color: #fff;
+  header {
+      height: 44px;
+      background: @mainColor;
+      .left {
+          .ic-back {
+              display: block;
+              color: white;
+              width: 50px;
+              height: 44px;
+              font-size: 24px;
+              text-align: center;
+              line-height: 44px;
+          }
+      }
+      .mid {
+          text-align: center;
+          line-height: 44px;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+          // font-family: '宋体';
+      }
+      .right {
+          .icon-app {
+              display: block;
+              width: 50px;
+              height: 44px;
+              background: url("../images/header_app.png") no-repeat center;
+              background-size: 32px 32px;
+          }
+      }
+  }
+          .container {
+              min-width: 320px;
+              max-width: 720px;
+              margin: 0 auto;
+              .price {
+                  margin-top: 5px;
+                  color: @mainColor;
+              }
+              .info {
+                  margin: 10px 0;
+                  color: #aaa;
+                  .time {
+                      margin: 0px 5px;
+                  }
+              }
+              .content {
+                  .pic {
+                      float: right;
+                      img {
+                          width: 120px;
+                          height: 120px;
+                      }
+                  }
+                  .intro {
+                      .first {
+                          margin-bottom: 15px;
+                          color: black;
+                      }
+                  }
+                  .bigimg {
+                      img {
+                          max-width: 380px;
+                          max-height: 350px;
+                      }
+                  }
+                  .golink {
+                      margin-top: 20px;
+                      border-radius: 5px;
+                      background: @mainColor;
+                      height: 40px;
+                      a {
+                          display: block;
+                          line-height: 40px;
+                          width: 100%;
+                          margin: 20px 10px;
+                          box-sizing: content-box;
+                          text-align: center;
+                          color: white;
+                      }
+                  }
+                  .comment {
+                      margin-top: 20px;
+                      border-top: 1px solid #ccc;
+                      padding: 6px 8px;
+                      padding-top: 0;
+                      color: black;
+                      font-size: 16px;
+                      position: relative;
+                      .word{
+                        position: absolute;
+                        top:8px;
+                        right:10px;
+                        color:#999;
+                        font-size: 12px;
+                        i{
+                          color: @mainColor;
+                        }
+                      }
+                      .tit {
+                          margin: 5px 0;
+                          font-size: 16px;
+                      }
+                      .list {
+                          li {
+                              padding: 18px 10px;
+                              background-color: #FFFFFF;
+                          }
+                          .ui-border-b {
+                              border-bottom: 1px solid #e0e0e0;
+                              .userimg {
+                                  width: 40px;
+                                  float: left;
+                                  overflow: hidden;
+                                  height: 40px;
+                                  img {
+                                      height: 40px;
+                                      width: 40px;
+                                      border-radius: 20px;
+                                  }
+                              }
+                              .con {
+                                  margin-left: 50px;
+                                  position: relative;
+                                  .name{
+                                    height: 25px;
+                                  }
+                                  .username {
+                                      color: #5997c0;
+                                      font-size: 13px !important;
+                                      float: left;
+                                  }
+                                  .time {
+                                      color: #999999;
+                                      font-size: 13px !important;
+                                      float: right;
+                                  }
+                                  .content {
+                                      word-break: break-all;
+                                      font-size: 15px !important;
+                                      color: #606060;
+                                      line-height: 20px;
+                                  }
+                                  input{
+                                    background: @mainColor;
+                                    color: white;
+                                    width: 45px;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    text-align: center;
+                                      position: absolute;
+                                    bottom: -5px;
+                                      right: 0px;
+                                      
+                                  }
+                              }
+                          }
+                      }
+                      .reply {
+                          font-size: 16px;
+                          // padding: 6px 8px;
+                          .form {
+                              border: 2px solid #ECEAE8;
+                              border-radius: 2px;
+                              padding: 4px 0 0 4px;
+                              background-color: #fff;
+                              position: relative;
+                              width: 100%;
+                              margin: 0px auto;
+                              textarea {
+                                  width: 100%;
+                                  resize: none;
+                                  overflow-x: hidden;
+                                  overflow-y: auto;
+                                  border: none;
+                                  line-height: 22px;
+                                  font-size: 14px;
+                                  outline: 0;
+                                  color: #666;
+                                  height: 68px;
+                              }
+                              .ctrl {
+                                  background-color: #fbfbfb;
+                                  height: 36px;
+                                  margin-left: -4px;
+                                  border-top: solid 1px #f2f2f2;
+                                  input {
+                                      position: absolute;
+                                      right: -2px;
+                                      bottom: -2px;
+                                      background: #ff841d;
+                                      border: none;
+                                      /* border: 2px solid #ff841d; */
+                                      border-left: none;
+                                      border-top: none;
+                                      padding: 0px;
+                                      width: 100px;
+                                      height: 39px;
+                                      color: #fff;
+                                      outline: 0;
+                                      border-radius: 0 0 2px 0;
+                                      font-size: 16px;
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+          .brand {
+              margin-top: 10px;
+              height: 44px;
+              background: linear-gradient(to bottom, white, #ccc);
+              border-top: 1px solid #aaa;
+              border-bottom: 1px solid #aaa;
+              ol {
+                  li {
+                      line-height: 44px;
+                      float: left;
+                      a {
+                        display: inline-block;
+                          font-family: "宋体";
+                          color: black;
+                      }
+                      .detail{
+                        width: 100px;
+                      }
+                  }
+              }
+          }
+          // 底部
+          #footer {
+              background-color: #efefef;
+              .foot_nav {
+                  border-top: 1px solid #c4c4c4;
+                  border-bottom: 1px solid #c4c4c4;
+                  height: 34px;
+                  line-height: 34px;
+                  margin-top: 25px;
+                  text-align: center;
+                  font-size: 14px;
+                  .login {
+                      box-sizing: border-box;
+                      width: 30%;
+                      border-right: 1px solid #c4c4c4;
+                  }
+                  .register {
+                      box-sizing: border-box;
+                      width: 30%;
+                      border-right: 1px solid #c4c4c4;
+                  }
+                  .back_top {
+                      width: 40%;
+                      img {
+                          display: inline-block;
+                          width: 15px;
+                          height: 15px;
+                          margin-right: 5px;
+                      }
+                  }
+              }
+              .footer_bottom {
+                  padding: 15px 0;
+                  text-align: center;
+                  .app_name {
+                      a {
+                          color: Red;
+                      }
+                  }
+              }
+          }
+      }

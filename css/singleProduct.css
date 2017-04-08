@@ -1,0 +1,236 @@
+@charset "utf-8";
+.single-header {
+  width: 100%;
+  height: 44px;
+  background-color: #ff841d;
+  position: relative;
+}
+.single-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.single-back a {
+  display: block;
+  width: 50px;
+  height: 44px;
+  background: url(../images/back.png) no-repeat center / 20px 20px;
+}
+.single-app {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.single-app a {
+  display: block;
+  width: 50px;
+  height: 44px;
+  background: url(../images/header_app.png) no-repeat center / 32px 32px;
+}
+.single-title {
+  height: 100%;
+}
+.single-title h3 {
+  height: 100%;
+  font-size: 20px;
+  color: white;
+  line-height: 44px;
+  text-align: center;
+}
+.single-search {
+  height: 37px;
+  background: white;
+  color: black;
+  border-bottom: 1px solid #dadada;
+  position: relative;
+}
+.single-search .search-box a {
+  display: block;
+  height: 37px;
+  width: 45px;
+  border-left: 1px solid #dadada;
+  background: url('../images/search.png') no-repeat center / 23px 23px;
+}
+.single-search ul {
+  margin-right: 46px;
+  height: 100%;
+}
+.single-search ul li {
+  width: 33.3333%;
+  height: 100%;
+  float: left;
+}
+.single-search ul li a {
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: black;
+  line-height: 37px;
+}
+.single-search ul li a i {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/up.png) no-repeat center / 22px 22px;
+  vertical-align: middle;
+}
+.single-search .pullbox {
+  visibility: hidden;
+  width: 100%;
+  position: absolute;
+  background: white;
+  left: 0;
+  top: 38px;
+  box-shadow: 0 2px 7px #ccc;
+}
+.single-search .pullbox ul {
+  width: 100%;
+}
+.single-search .pullbox ul li {
+  width: 100%;
+  height: 39px;
+  border-bottom: 1px solid #dadada;
+  box-sizing: border-box;
+  line-height: 39px;
+  padding: 0 10px;
+  font-size: 16px;
+  position: relative;
+}
+.single-search .pullbox ul li .correct {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  right: 15px;
+  margin-top: -10px;
+  background: url('../images/correct.png') no-repeat center / 20px 20px;
+}
+.on {
+  visibility: visible !important;
+}
+.single-product {
+  padding: 6px 0;
+}
+.single-product ul {
+  width: 98%;
+  margin: 0 auto;
+}
+.single-product ul li {
+  width: 50%;
+  height: 235px;
+  float: left;
+  box-sizing: border-box;
+  display: block;
+  padding: 4px;
+}
+.single-product ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: black;
+}
+.single-product ul li a p {
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 0 6px;
+}
+.single-product ul li a .product-img {
+  text-align: center;
+  width: 100%;
+  height: 174px;
+}
+.single-product ul li a .product-img img {
+  width: 174px;
+  height: 174px;
+  display: inline-block;
+  max-width: 100%;
+}
+.single-product ul li a .product-price {
+  box-sizing: border-box;
+  height: 27px;
+  width: 100%;
+  padding: 0 6px;
+}
+.single-product ul li a .product-price div {
+  float: right;
+  width: 62px;
+  height: 27px;
+  background: #ff9501;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 27px;
+  color: white;
+}
+.single-product ul li a .product-price span {
+  color: #f8601d;
+  font-size: 20px;
+  float: left;
+}
+#footer > h2 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  height: 35px;
+  font-weight: bold;
+  line-height: 35px;
+  background-color: #ff9000;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  position: relative;
+}
+#footer > h2 a {
+  display: block;
+  height: 100%;
+}
+#footer > h2 a span {
+  display: inline-block;
+  line-height: 35px;
+  font-size: 18px;
+  color: #fff;
+  margin-left: 18px;
+}
+#footer > h2 a img {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+#footer .foot_nav {
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+#footer .foot_nav .login {
+  box-sizing: border-box;
+  width: 30%;
+  border-right: 1px solid #c4c4c4;
+}
+#footer .foot_nav .register {
+  box-sizing: border-box;
+  width: 30%;
+  border-right: 1px solid #c4c4c4;
+}
+#footer .foot_nav .back_top {
+  width: 40%;
+}
+#footer .foot_nav .back_top img {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+#footer .footer_bottom {
+  padding: 15px 0;
+  text-align: center;
+}
+#footer .footer_bottom .app_name a {
+  color: Red;
+}

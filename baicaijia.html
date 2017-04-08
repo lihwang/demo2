@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<!-- 引入公共样式 -->
+<link rel="stylesheet/less" type="text/css" href="css/baseye.less" />
+<!-- 引入自己的样式 -->
+<link rel="stylesheet/less" type="text/css" href="css/baicaijia.less" />
+<!-- 引入icfont.css -->
+<link rel="stylesheet" type="text/css" href="lib/fontye/iconfont.css">
+<!-- <link rel="stylesheet" type="text/css" href="lib/swipe/swiper.css"> -->
+<!-- 引入jquery库 -->
+<script src="lib/jquery/jquery.min.js"></script>
+<!-- 引入less.js -->
+<script src="lib/less/less.js" type="text/javascript"></script>
+<!-- 引入template.js -->
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="lib/swiper/swipe.js"></script>
+<!-- 引入自己的js -->
+<script src="js/baicaijia.js"></script>
+<script id="prolist" type="text/html">
+    <!-- 商品列表模板 -->
+    {{if result}} {{each result as value}}
+    <li>
+        <a href="https://detail.tmall.com/item.htm?id=527609582991&ali_trackid=2" class="cover"></a>
+        <div class="pro">
+            <div class="fl list-left">{{#value.productImg}}</div>
+            <div class="list-right">
+                <p>{{#value.productName}}</p>
+                <div class="price">{{#value.productPrice}}</div>
+                <div class="coupon">
+                    {{#value.productCoupon}}
+                </div>
+                {{#value. productCouponRemain}}
+                <div class="btn"><a href="#">下单链接</a></div>
+            </div>
+    </li>
+    {{/each}} {{/if}}
+</script>
+
+<body>
+    <!-- 顶部 -->
+    <header>
+        <div class="left fl">
+            <a href="index.html" class="ic-back iconfont icon-zuojiantou"></a>
+        </div>
+        <div class="right fr">
+            <a href="#" class="icon-app"></a>
+        </div>
+        <div class="mid">白菜价-淘宝内部券</div>
+    </header>
+    <!-- 导航-->
+    <nav>
+        <div class="swiper-container">
+            <div class="titleBox swiper-wrapper">
+                <ul class="title swiper-slide">
+                </ul>
+            </div>
+        </div>
+        <div class="ic-search iconfont icon-xitongzuoceicon">
+            <a href="#"></a>
+        </div>
+    </nav>
+    <div class="search">
+        <div class="fr btn">搜索</div>
+        <div class="sea">
+            <i class="iconfont icon-sou first"></i>
+            <input type="text" placeholder="搜索商品即可查内部券" id="search">
+        </div>
+        <i class="iconfont icon-cuo second"></i>
+    </div>
+    <!-- 广告 -->
+    <div class="advertise">
+        <img src="images/advertise.png" height="128" width="698" alt="">
+        <i class="iconfont icon-cuo cuo"></i>
+    </div>
+    <!--商品列表-->
+    <div class="pro-list">
+        <ul>
+            <!--  <li>
+               <div class="pro">
+                   <div class="fl list-left"></div>
+                   <div class="fl list-right">
+                       <p>hello world</p>
+                       <div class="price">券后<span class="word">&yen;<strong>14.8</strong></span> <span class="initprice"> &yen;13</span></div>
+                       <a href="#" class="coupon">
+                           <div><span>ffffff</span></div>
+                           <span>hhhhhkkk</span>
+                       </a>
+                   </div>
+                   <div class="btn"><a href="#">下单链接</a></div>
+               </div>
+           </li> -->
+        </ul>
+    </div>
+    <!-- 底部 -->
+    <footer>
+        <div class="foot">
+            <ul>
+                <li><a href="entry.html">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li class="top"><a href="#"><i class="iconfont icon-jiantouxiangshang"></i>返回顶部</a></li>
+            </ul>
+        </div>
+        <p><span>手机app下载</span><i>慢慢慢手机版</i>-掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </footer>
+</body>
+
+</html>

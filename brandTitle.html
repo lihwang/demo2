@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- bootstrap样式 -->
+  <!-- <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"> -->
+  <!-- 基本通用样式 -->
+  <link rel="stylesheet/less" href="css/base.less">
+  <!-- 自己的样式 -->
+  <link rel="stylesheet/less" href="css/brandTitle.less">
+  <!-- Less转化 -->
+  <script src="lib/less/less.js"></script>
+  <title>慢慢买-品牌大全</title>
+</head>
+<body>
+  <!-- 页面主容器 -->
+  <div class="layout">
+    <!--顶部LOGO-->
+    <header id='header'>
+      <div class="header_logo fl">
+        <a href="index.html"><img src="images/header_logo.png" alt=""></a>
+      </div>
+      <div class="header_app fr">
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img src="images\header_app.png" alt=""></a>
+      </div>
+    </header>
+   <!--搜索框-->
+    <div id='search'>
+      <form action="#">
+        <input type="text" name="search" placeholder="请输入你想比价的商品">
+        <input type="submit" value='搜索' id='inquire'>
+      </form>
+    </div>
+    <!-- 链式导航栏 -->
+    <div class="nav">
+      <a href="index.html">首页</a>><a href="brandTitle.html">品牌大全</a>
+    </div>
+    <!-- 比价内容 -->
+    <div class="hot_brand">
+      <h3>热门品牌排行</h3>
+      <div class="con">
+        
+      </div>
+    </div>
+    <!--底部-->
+    <div id="footer">
+      <div class="foot_nav">
+        <a href="entry.html" class="login fl">登录</a>
+        <a href="register.html" class='register fl'>注册</a>
+        <a href="#header" class="back_top fl">
+          <img src="images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <div class="footer_bottom">
+        <p class="app_name"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+        <p class="website"><a href="#">m.manmanbuy.com </a></p>
+        </div>
+    </div>
+</div>
+<!-- 比价内容模板 -->
+<script type='text/html' id='brandTep'>
+    {{each result as value}}
+    <div class="classify"><a href="brand_list.html?brandTitleId={{value.brandTitleId}}"  categoryId="{{value.categoryId}}">{{value.brandTitle}}</a></div>
+    {{/each}}
+</script>
+  <!-- jQuery 框架 -->
+  <script src='lib/jquery/jquery.js'></script>
+  <!-- bootstrap 框架 -->
+  <!-- <script src="lib/bootstrap/js/bootstrap.js"></script> -->
+  <!-- templete模板引擎 -->
+  <script src="lib/artTemplate-master/template.js"></script>
+  <!-- 自己的JS -->
+  <script src='js/brandTitle.js'></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+/*
+* @Author: lcj
+* @Date:   2017-03-28 19:52:05
+* @Last Modified by:   lcj
+* @Last Modified time: 2017-03-28 19:52:08
+*/
+.layout{
+  // 顶部
+  background-color: #fff;
+      #header{
+         height: 50px;
+         width: 100%;
+         background-color: #ff841d;
+         overflow: hidden;
+         border-bottom: 1px solid #e6e6e6;
+          a{
+            display: block;
+            height: 100%;
+         }
+         .back{
+                width: 50px;
+                height:34px;
+                 a{
+                     padding: 8px 0;
+                    background:url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='1.5em' height='1.5em'><path fill='#FFFFFF' d='M818.881422 747.988622 755.734756 812 313.503289 363.943111 313.480533 363.965867 250.311111 299.931733 755.734756-212.113778 818.881422-148.1024 376.672711 299.954489Z' transform='translate(0, 812) scale(1, -1)'/></svg>") no-repeat center;    
+                   }
+              }
+        .header_app{
+            height: 100%;
+            img{
+                 padding: 8px;
+                max-height: 34px;
+                overflow: hidden;
+                }
+             }
+       >h1{
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+       }      
+     }
+
+// 商品列表
+.container{
+    max-width: 980px;
+    margin: 0 auto;
+   .promotion{
+          background-color: #fff;
+         
+          >ul{
+              >li{
+                  padding: 14px 8px;
+                  border-bottom: 1px solid #e7e7e7;
+                >a{
+                    display: block;
+                    .shop_img{
+                        img{
+                            width: 100px;
+                            height: 100px;
+                            overflow: hidden;
+                        }
+                    }
+                    .detail{
+                        margin-left: 108px;
+                        h3{
+                            color:#333333;
+                            text-align: left;
+                            min-height: 38px;
+                            font-size: 15px;
+                            line-height: 19px;
+                            padding-top: 6px;
+                            padding-bottom: 19px;
+                            overflow: hidden;
+                            font-weight: normal;
+                            word-break:break-all;
+                            span{
+                                color: #ff6c00;
+                            }
+                        }
+                      .productComCount{
+                          i{
+                              display: inline-block;
+                              width: 14px;
+                              height: 15px;
+                              margin-right: 4px;
+                              vertical-align: middle;
+                              background:url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17'><path fill='#a1a1a1' d='M924.504962 664.898711 97.819886 664.898711c-17.557888 0-31.795147-14.241352-31.795147-31.795147l0-508.732583c0-17.557888 14.238282-31.792077 31.795147-31.792077l241.198387 0 149.664671-149.661601c6.209422-6.212492 14.34266-9.31618 22.478967-9.31618s16.269545 3.102664 22.479991 9.31618L683.306574 92.57788l241.198387 0c17.557888 0 31.795147 14.235213 31.795147 31.792077L956.300109 633.10254C956.300109 650.657358 942.061826 664.898711 924.504962 664.898711zM892.708791 156.169197l-222.569098 0c-8.428973 0-16.518209-3.354398-22.478967-9.31618l-136.498814-136.494721-136.498814 136.494721c-5.961782 5.961782-14.051017 9.31618-22.479991 9.31618l-222.569098 0L129.61401 601.304324l763.093758 0L892.707768 156.169197zM288.592814 378.735226m-63.591317 0a62.143 62.143 0 1 0 127.182634 0 62.143 62.143 0 1 0-127.182634 0ZM511.161912 378.735226m-63.591317 0a62.143 62.143 0 1 0 127.182634 0 62.143 62.143 0 1 0-127.182634 0ZM733.73101 378.735226m-63.591317 0a62.143 62.143 0 1 0 127.182634 0 62.143 62.143 0 1 0-127.182634 0Z' transform='translate(0, 812) scale(1, -1)'/></svg>") no-repeat center;
+                          }
+                      }
+                    }
+                }
+              }
+          }
+      }
+      .select{
+          margin-top: 20px;
+          .btn{
+              display: inline-block;
+              background-color: #d4d4d4;
+              padding: 8px 20px;
+              font-size: 14px;
+              text-align: center;
+              height: 32px;
+              line-height: 18px;
+              background:-webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+              border-bottom: 1px solid #bababa;
+              border-radius: 5px;
+              box-shadow: 0 0 1px #666;
+              box-sizing: border-box;
+              color: #000;
+          }
+          .pageUp{
+              margin-left: 30px;
+          }
+          .pageDown{
+              margin-right: 30px;
+          }
+          #selectPage{
+              display: block;
+              height: 32px;
+              font-size: 16px;
+              border:1px solid #bababa;
+              padding: 0 15px;
+              margin: 0 auto;
+              option{
+                  text-align: center;
+              }
+          }
+      }
+    
+}
+
+
+  #footer{
+      background-color: #efefef;
+      .foot_nav{
+          border-top: 1px solid #c4c4c4;
+          border-bottom: 1px solid #c4c4c4;
+          height: 34px;
+          line-height: 34px;
+          margin-top: 25px;
+          text-align: center;
+          font-size: 14px;
+            .login{
+                box-sizing: border-box;
+                width: 30%;
+                border-right: 1px solid #c4c4c4;  
+            }
+            .register{
+                 box-sizing: border-box;
+                width: 30%;
+                border-right: 1px solid #c4c4c4;  
+            }
+            .back_top{
+                width: 40%;
+                img{
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 5px;
+                }
+            }
+      }
+      .footer_bottom{
+          padding: 15px 0;
+          text-align: center;
+          .app_name{
+             a{
+                 color: Red;
+             }
+          }
+
+      }
+
+  }
+}

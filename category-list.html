@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 基本通用样式 -->
+    <link rel="stylesheet/less" href="css/base.less">
+    <!-- 自己的样式 -->
+    <link rel="stylesheet/less" href="css/category.less">
+    <link rel="stylesheet/less" href="css/category-list.less">
+    <!-- Less转化 -->
+    <script src="lib/less/less.js"></script>
+    <title>产品分类 - 慢慢买比价网</title>
+</head>
+
+<body>
+    <!-- 页面主容器 -->
+    <div class="layout">
+        <!--头部-->
+        <header class="clearfix" id="header">
+            <div class="logo fl">
+                <a href='index.html'>
+                    <img src="images/header_logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="download fr">
+                <a href='#'>
+                    <img src="images/header_app.png" alt="下载app">
+                </a>
+            </div>
+        </header>
+        <!--搜索-->
+        <div class="search-index">
+            <div class="text"><input type="search" placeholder="请输入你想比价的商品"></div>
+            <div class="button"><input type="button" value="搜索"></div>
+        </div>
+        <!--导航-->
+        <nav>
+            <ul class="clearfix">
+                <li><a href="#" class="first">综合</a></li>
+                <li><a href="#" >销量</a></li>
+                <li><a href="#" >价格</a></li>
+                <li><i></i><a href="#" >筛选</a></li>
+            </ul>
+        </nav>
+        <!--主体内容-->
+        <main>
+            <!--<div class="container">-->
+                <ul id='container'>
+                    <!--<li>
+                        <a href="#" class="clearfix">
+                            <div class="img fl">
+                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/6efdbe008dc49d8304d9dae3d647f4c727ab76b8.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <h5>pigeon 贝亲 宝宝专用指甲剪 适合9个月以上</h5>
+                                 <span>￥1999.00</span>
+                                <p>日本亚马逊</p>
+                            </div>
+                            <div class="comment"><span>0</span></div>
+                        </a>
+                    </li>-->
+                </ul>
+                <div class="change clearfix">
+                    <div class="left fl">
+                        <button>上一页</button>
+                    </div>
+                    <div class="right fr">
+                        <button>下一页</button>
+                    </div>
+                    <div class="center">
+                        <select id='money_sel'>
+                            <option value="1">1/14</option>
+                        </select>
+                    </div>
+                    <div class="foot">
+                        <p>相关链接：</p>
+                        <p><a href='#'>电视机十大品牌</a></p>
+                        <p><a href='#'>电视机口碑大全</a></p>
+                    </div>
+                </div>
+            <!--</div>-->
+        </main>
+        <!--底部-->
+        <footer>
+            <ul class="links clearfix">
+                <li><a href="entry.html">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li>
+                    <a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a>
+                </li>
+            </ul>
+            <div class="txt">
+                <a href="#">手机app下载</a><a href="#">慢慢买手机版</a>--掌上比价平台<br> m.manmanbuy.com
+            </div>
+            <div class="fixed">
+                <div class="left fl">
+                    <div class="img fl" id='fixed_close'><img src="images/关闭.png" width="21" alt=""></div>
+                    <div class="icon fl"></div>
+                    <p>慢慢买</p>
+                    <p>全网比价,查历史价格</p>
+                </div>
+                <div class="right fr"><a href="http://m.manmanbuy.com/?o=download">立即打开</a></div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!--引用模版-->
+    <script type='text/template' id='tem_cat_list'>
+        {{if result}}{{each result as value}}
+            <li>
+                <a href="#" class="clearfix">
+                    <div class="img fl">
+                        {{=value.productImg}}
+                    </div>
+                    <div class="txt">
+                        <h5>{{value.productName}}</h5>
+                            <span>{{value.productPrice}}</span>
+                        <p>{{getNum(value.productQuote)}}商城报价</p>
+                    </div>
+                    <div class="comment"><span>有{{getNum(value.productCom)}}人评论</span></div>
+                </a>
+            </li>
+        {{/each}} {{/if}}
+    </script>
+    <!-- jQuery 框架 -->
+    <script src='lib/jquery/jquery.js'></script>
+    <!-- bootstrap 框架 -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- templete模板引擎 -->
+    <script src="lib/artTemplate-master/template.js"></script>
+    <!-- 自己的JS -->
+    <script src="js/category-list.js"></script>
+</body>
+
+</html>

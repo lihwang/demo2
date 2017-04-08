@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- bootstrap样式 -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<!-- 基本通用样式 -->
+	<link rel="stylesheet/less" href="css/base.less">
+	<!-- 自己的样式 -->
+	<link rel="stylesheet/less" href="css/index.less">
+	<link rel="stylesheet/less" href="css/category.less">
+	<!-- Less转化 -->
+	<script src="lib/less/less.js"></script>
+	<title>产品分类 - 慢慢买比价网</title>
+</head>
+
+<body>
+	<!-- 页面主容器 -->
+	<div class="layout">
+		<!--头部-->
+		<header class="clearfix" id="header">
+			<div class="logo fl">
+				<a href='index.html'>
+					<img src="images/header_logo.png" alt="logo">
+				</a>
+			</div>
+			<div class="download fr">
+				<a href='#'>
+					<img src="images/header_app.png" alt="下载app">
+				</a>
+			</div>
+		</header>
+		<!--搜索-->
+		<div class="search-index">
+			<div class="text"><input type="search" placeholder="请输入你想比价的商品"></div>
+			<div class="button"><input type="button" value="搜索"></div>
+		</div>
+		<!--主体内容-->
+		<main>
+			<div id="main">
+			</div>
+		</main>
+		<!--底部-->
+		<footer>
+			<ul class="links clearfix">
+				<li><a href="entry.html">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+				<li>
+					<a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a>
+				</li>
+			</ul>
+			<div class="txt">
+				<a href="#">手机app下载</a><a href="#">慢慢买手机版</a>--掌上比价平台<br> m.manmanbuy.com
+			</div>
+			<div class="fixed">
+				<div class="left fl">
+					<div class="img fl" id='fixed_close'><img src="images/关闭.png" width="21" alt=""></div>
+					<div class="icon fl"></div>
+					<p>慢慢买</p>
+					<p>全网比价,查历史价格</p>
+				</div>
+				<div class="right fr"><a href="http://m.manmanbuy.com/?o=download">立即打开</a></div>
+			</div>
+		</footer>
+
+	</div>
+
+	<!--引用模版-->
+	<script type='text/template' id='tmp_category'>
+		{{if result}} 
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				{{each result as value}}
+				<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{value._id}}" aria-expanded="false" aria-controls={{value._id}}>
+							{{value.title}}
+							</a>
+						</h4>
+						</div>
+						<div id={{value._id}} class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body">
+							<table class="table">
+								<tbody>
+									<tr>
+										<td><a href="#">平板电视</a></td>
+										<td><a href="#">空调</a></td>
+										<td><a href="#">家庭影院</a></td>
+									</tr>
+									<tr>
+										<td><a href="#">家庭影院</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		{{/if}}
+	</script>
+	<!-- jQuery 框架 -->
+	<script src='lib/jquery/jquery.js'></script>
+	<!-- bootstrap 框架 -->
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<!-- templete模板引擎 -->
+	<script src="lib/artTemplate-master/template.js"></script>
+	<!-- 自己的JS -->
+	<script src="js/category.js"></script>
+</body>
+
+</html>

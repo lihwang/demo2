@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- 基本通用样式 -->
+  <link rel="stylesheet/less" href="css/base.less">
+  <!-- 自己的样式 -->
+  <link rel="stylesheet/less" href="css/moneyctrl.less">
+  <!-- Less转化 -->
+  <script src="lib/less/less.js"></script>
+  <title>省钱控-最新优惠</title>
+</head>
+
+<body>
+	<!-- 页面主容器 -->
+	<div class="layout">
+         <!--顶部LOGO-->
+		<header id='header'>
+			<div class="back fl">
+				<a href="index.html"></a>
+			</div>
+			<div class="header_app fr">
+				<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img src="images\header_app.png" alt=""></a>
+			</div>
+			<h1> 省钱控 - 最新优惠 </h1>
+		</header>
+
+    <!--商品列表-->
+    <div class="container">
+        <div class="promotion">
+
+        </div>
+    <!--动态选择框-->
+    <div class="select">
+        <a href="#" class="pageUp btn fl">上一页</a>
+        <a href="#" class="pageDown btn fr">下一页</a>
+        <select name="page" id="selectPage">
+
+        </select>
+    </div>
+    </div>
+    
+
+ 
+    <!--底部-->
+    <div id="footer">
+      <div class="foot_nav">
+        <a href="entry.html" class="login fl">登录</a>
+        <a href="register.html" class='register fl'>注册</a>
+        <a href="#header" class="back_top fl">
+          <img src="images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <div class="footer_bottom">
+        <p class="app_name"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+        <p class="website"><a href="index.html">m.manmanbuy.com </a></p>
+        </div>
+    </div>
+</div>
+
+ 
+    <!--促销商品模板-->
+    	<script type="text/html" id='promotionTep'>
+			<ul>
+			{{each result as value}}
+				<li class="clearfix">
+					<a href="moneyproduct.html?productId={{value.productId}}" >
+							<div class='shop_img fl'>{{#value.productImgSm}}</div>
+							<div class='detail'>
+								<h3 class='txt-cut'>{{value.productName}} <span> {{value.productPinkage}}</span></h3>
+								<div class='clearfix'>
+									 <span class="productFrom fl">{{value.productFrom}} | {{value.productTime}}</span>
+								     <div class="fr productComCount"><span><i></i>{{value.productComCount.replace('有','').replace('人评论','')}}</span></div>
+								</div>
+							</div>
+						</a>
+					</li>
+			{{/each}}
+		    </ul>
+	</script>
+
+    
+
+  <!-- jQuery 框架 -->
+  <script src='lib/jquery/jquery.js'></script>
+  <!-- templete模板引擎 -->
+  <script src="lib/artTemplate-master/template.js"></script>
+  <!--自己的JS-->
+  <script src="js/moneyctrl.js"></script>
+</body>
+</html>

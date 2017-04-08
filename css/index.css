@@ -1,0 +1,235 @@
+/*
+* @Author: lcj
+* @Date:   2017-03-28 19:52:05
+* @Last Modified by:   lcj
+* @Last Modified time: 2017-03-28 19:52:08
+*/
+.layout #header {
+  height: 30px;
+  width: 100%;
+  background-color: #FF841D;
+  overflow: hidden;
+  border-bottom: 1px solid #e6e6e6;
+}
+.layout #header .header_logo {
+  height: 100%;
+}
+.layout #header .header_logo img {
+  padding: 12px;
+  max-height: 25px;
+  overflow: hidden;
+}
+.layout #header .header_app img {
+  padding: 8px;
+  max-height: 34px;
+  overflow: hidden;
+}
+.layout #search {
+  background-color: #fff;
+  position: relative;
+  height: 50px;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.layout #search input[name=search] {
+  height: 30px;
+  width: 90%;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 15px;
+  padding-left: 5%;
+  background-color: #F1F1F1;
+}
+.layout #search #inquire {
+  height: 30px;
+  width: 63px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #ff841d;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.layout #menu {
+  padding-top: 10px;
+}
+.layout #menu ul {
+  background-color: #fff;
+  width: 100%;
+  padding: 6px 0;
+  padding-bottom: 22px;
+}
+.layout #menu ul li {
+  width: 25%;
+  height: 70px;
+  text-align: center;
+  float: left;
+  margin-top: 16px;
+}
+.layout #menu ul li a {
+  display: block;
+  height: 100%;
+}
+.layout #menu ul li a img {
+  max-height: 50px;
+  margin: 0 auto;
+}
+.layout #menu ul li a p {
+  color: #5a5a5a;
+  font-size: 13px;
+  margin-top: 3px;
+}
+.layout #menu ul li:nth-last-of-type(-n+4) {
+  display: none;
+}
+.layout #menu ul li.show {
+  display: block;
+}
+.layout #goods {
+  padding-top: 5px;
+}
+.layout #goods > h2 {
+  height: 35px;
+  font-weight: bold;
+  line-height: 35px;
+  background-color: #ff9000;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  position: relative;
+}
+.layout #goods > h2 > a {
+  display: block;
+  height: 100%;
+}
+.layout #goods > h2 > a span {
+  display: inline-block;
+  line-height: 35px;
+  font-size: 18px;
+  color: #fff;
+  margin-left: 18px;
+}
+.layout #goods > h2 > a img {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+.layout #goods > .goods_list {
+  background-color: #fff;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.layout #goods > .goods_list > ul > li {
+  padding: 14px 8px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.layout #goods > .goods_list > ul > li > a {
+  display: block;
+}
+.layout #goods > .goods_list > ul > li > a .shop_img img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.layout #goods > .goods_list > ul > li > a .detail {
+  margin-left: 108px;
+}
+.layout #goods > .goods_list > ul > li > a .detail h3 {
+  color: #333333;
+  text-align: left;
+  min-height: 57px;
+  font-size: 15px;
+  padding-top: 6px;
+}
+.layout #goods > .goods_list > ul > li > a .detail h3 span {
+  color: #ff6c00;
+}
+.layout #goods > .goods_list > ul > li > a .detail .productComCount i {
+  display: inline-block;
+  width: 14px;
+  height: 15px;
+  margin-right: 4px;
+  vertical-align: middle;
+  background: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17'><path fill='#a1a1a1' d='M924.504962 664.898711 97.819886 664.898711c-17.557888 0-31.795147-14.241352-31.795147-31.795147l0-508.732583c0-17.557888 14.238282-31.792077 31.795147-31.792077l241.198387 0 149.664671-149.661601c6.209422-6.212492 14.34266-9.31618 22.478967-9.31618s16.269545 3.102664 22.479991 9.31618L683.306574 92.57788l241.198387 0c17.557888 0 31.795147 14.235213 31.795147 31.792077L956.300109 633.10254C956.300109 650.657358 942.061826 664.898711 924.504962 664.898711zM892.708791 156.169197l-222.569098 0c-8.428973 0-16.518209-3.354398-22.478967-9.31618l-136.498814-136.494721-136.498814 136.494721c-5.961782 5.961782-14.051017 9.31618-22.479991 9.31618l-222.569098 0L129.61401 601.304324l763.093758 0L892.707768 156.169197zM288.592814 378.735226m-63.591317 0a62.143 62.143 0 1 0 127.182634 0 62.143 62.143 0 1 0-127.182634 0ZM511.161912 378.735226m-63.591317 0a62.143 62.143 0 1 0 127.182634 0 62.143 62.143 0 1 0-127.182634 0ZM733.73101 378.735226m-63.591317 0a62.143 62.143 0 1 0 127.182634 0 62.143 62.143 0 1 0-127.182634 0Z' transform='translate(0, 812) scale(1, -1)'/></svg>") no-repeat center;
+}
+.layout #goods .more_bar {
+  padding-bottom: 10px;
+}
+.layout #goods .more_bar > a {
+  display: block;
+  height: 30px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 30px;
+  text-align: center;
+  color: #5a5a5a;
+  border: 1px solid #dddddd;
+  background-color: #F4F4F4;
+}
+.layout #footer > h2 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  height: 35px;
+  font-weight: bold;
+  line-height: 35px;
+  background-color: #ff9000;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  position: relative;
+}
+.layout #footer > h2 a {
+  display: block;
+  height: 100%;
+}
+.layout #footer > h2 a span {
+  display: inline-block;
+  line-height: 35px;
+  font-size: 18px;
+  color: #fff;
+  margin-left: 18px;
+}
+.layout #footer > h2 a img {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+.layout #footer .foot_nav {
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+.layout #footer .foot_nav .login {
+  box-sizing: border-box;
+  width: 30%;
+  border-right: 1px solid #c4c4c4;
+}
+.layout #footer .foot_nav .register {
+  box-sizing: border-box;
+  width: 30%;
+  border-right: 1px solid #c4c4c4;
+}
+.layout #footer .foot_nav .back_top {
+  width: 40%;
+}
+.layout #footer .foot_nav .back_top img {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.layout #footer .footer_bottom {
+  padding: 15px 0;
+  text-align: center;
+}
+.layout #footer .footer_bottom .app_name a {
+  color: Red;
+}

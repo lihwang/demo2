@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- bootstrap样式 -->
+  <!--<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">-->
+  <!-- 基本通用样式 -->
+  <!--<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="css/base1.css">
+  <!-- 自己的样式 -->
+  <link rel="stylesheet" href="css/compare.css">
+
+  
+  <!-- Less转化 -->
+  <!--<script src="lib/less/less.js"></script>-->
+  <title>慢慢买-比价搜索</title>
+</head>
+
+<body>
+  <!-- 页面主容器 -->
+  <div class="layout">
+    <!--顶部LOGO-->
+    <header id='header'>
+      <div class="header_logo fl">
+        <a href="index.html"><img src="images/header_logo.png" alt=""></a>
+      </div>
+      <div class="header_app fr">
+        <a href="#"><img src="images\header_app.png" alt=""></a>
+      </div>
+    </header>
+   <!--搜索框-->
+    <div id='search'>
+      <form action="#">
+        <input type="text" name="search" placeholder="请输入你想比价的商品">
+        <input type="submit" value='搜索' id='inquire'>
+      </form>
+    </div>
+
+    <!--商品列表分类-->
+    <div class="product-category">
+        <ul class="big-category">
+        </ul>
+    </div>
+ 
+    <!--底部-->
+    <div id="footer">
+      <div class="foot_nav">
+        <a href="#" class="login fl">登录</a>
+        <a href="#" class='register fl'>注册</a>
+        <a href="#header" class="back_top fl">
+          <img src="images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <div class="footer_bottom">
+        <p class="app_name"><a href="#">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+        <p class="website"><a href="#">m.manmanbuy.com </a></p>
+        </div>
+    </div>
+</div>
+  <!-- jQuery 框架 -->
+  <script src='lib/jquery/jquery.js'></script>
+  <!-- bootstrap 框架 -->
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <!-- templete模板引擎 -->
+  <script src="lib/artTemplate-master/template.js"></script>
+  <script src="js/compare.js"></script>
+  <script type="text/html" id="bigTmp">
+      {{if result}}
+          {{each result as value}}
+              <li class="odd" titleId={{value.titleId}}>{{value.title}}<i></i></li>
+              <li class="even">
+                <table>
+                  <tbody>
+                  </tbody>               
+                </table>
+              </li>
+          {{/each}}
+      {{/if}}
+  </script>
+</body>
+</html>

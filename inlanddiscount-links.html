@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 基本通用样式 -->
+    <link rel="stylesheet/less" href="css/base.less">
+    <!-- 自己的样式 -->
+    <link rel="stylesheet/less" href="css/inlanddiscount.less">
+    <!-- Less转化 -->
+    <script src="lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+
+<body>
+    <!-- 页面主容器 -->
+    <div class="layout">
+        <!--顶部LOGO-->
+        <header class="clearfix" id="header">
+            <div class="return fl">
+                <a href='inlanddiscount.html'>
+                    <img src="images/返回.png" alt="返回">
+                </a>
+            </div>
+            <div class="download fr">
+                <a href='#'>
+                    <img src="images/header_app.png" alt="下载app">
+                </a>
+            </div>
+            <h2>国内折扣</h2>
+        </header>
+        <!--主体内容-->
+        <main>
+            <!--<div class="links">
+                <h5>{{value.productName}}</h5>
+                <p>{{value.productPrice}}</p>
+                <p><span class='from'>{{value.productFrom}}</span> | <span class='time'>{{value.productTime}}</span></p>
+            </div>
+            <div class="contain clearfix">
+                <div class="minimg fr">
+                    <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=tp4_tp-y_b_sources/201703/30/58d89dc43451c6134.jpg_d480.jpg" alt="">
+                </div>
+                <div class="describe">
+                    BBBBB BBBBBBBBBBBB BBBBBBBBB BBBBBBBBBBBBBB BBBBBB BBBBBBBBBBBBBBBBBBB
+                </div>
+            </div>
+            <a href="#" class="buy">前往购买</a>
+            <div id="ajax">
+                <div class="tit"> 发表评论</div>
+                <div class="reply">
+                    <div class="form"> <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea> 
+                        <input name="ctl00$ContentBody$lbl_fbr"
+                                id="ctl00_ContentBody_lbl_fbr" value="手机端网友58***74" type="hidden"> 
+                        <input name="ctl00$ContentBody$hid_name"
+                                id="ctl00_ContentBody_hid_name" value="西域美农新疆特产五星和田红枣250g*2" type="hidden">
+                        <div class="ctrl"> 
+                            <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">                        
+                        </div>
+                    </div>
+                </div>
+                <div class="tit" id="newcomment"> 最新评论</div>
+                <div class="list">
+                    <ul> </ul>
+                </div>
+            </div>
+            <div class="route">
+                首页 &gt; 超值推荐 &gt; <span>灵越游</span>
+            </div>
+            <div class="footer">
+                <div class="contain clearfix">
+                    <div class="img fl"><img src="http://m.manmanbuy.com/download/images/logo.png" alt=""></div>
+                    <div class="txt fl">
+                        <p>慢慢买APP</p>
+                        <p>专注全网比价，每一次购物都在为你省钱</p>
+                    </div>
+                    <a href="#" class="fr open">立即打开</a>
+                </div>
+            </div>-->
+        </main>
+        <!--底部-->
+        <footer>
+            <ul class="links clearfix">
+                <li><a href="entry.html">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li>
+                    <a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a>
+                </li>
+            </ul>
+            <div class="txt">
+                <a href="#">手机app下载</a><a href="#">慢慢买手机版</a>--掌上比价平台<br> m.manmanbuy.com
+            </div>
+            <div class="fixed">
+                <a href="#"><img src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" alt=""></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- jQuery 框架 -->
+    <script src='lib/jquery/jquery.js'></script>
+    <!-- bootstrap 框架 -->
+    <!--添加模版-->
+    <script type='text/template' id='tem_in_links'>
+        <div class="links" id='tem_links'>
+            <h5>{{productName}}</h5>
+            <p>{{productPrice}}</p>
+            <p><span class='from'>{{productFrom}}</span> &nbsp; <span class='time'>{{productTime}}</span> &nbsp; <span>{{productTips}}</span></p>
+        </div>
+        <div class="contain clearfix" id='tem_contain'>
+            <div class="minimg fr">
+                {{=productImg}}
+            </div>
+            <div class="describe">
+                {{productInfo}}
+            </div>
+        </div>
+        <a href="#" class="buy">前往购买</a>
+        <div id="ajax">
+            {{=productComment}}
+        </div>
+        <div class="route">
+            <div class="txt"><a href="index.html">首页</a> &gt; <a href="inlanddiscount.html">超值推荐</a> &gt; <span>{{productName}}</span></div>
+        </div>
+        <div class="footer">
+            <div class="contain clearfix">
+                <div class="img fl"><img src="http://m.manmanbuy.com/download/images/logo.png" alt=""></div>
+                <div class="txt fl">
+                    <p>慢慢买APP</p>
+                    <p>专注全网比价，每一次购物都在为你省钱</p>
+                </div>
+                <a href="#" class="fr open">立即打开</a>
+            </div>
+        </div>
+    </script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- templete模板引擎 -->
+    <script src="lib/artTemplate-master/template.js"></script>
+    <!-- 自己的JS -->
+    <script src="js/index.js"></script>
+    <script src='js/inlanddiscount-links.js'></script>
+</body>
+
+</html>

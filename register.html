@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- bootstrap样式 -->
+	<!--<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">-->
+	<!-- 基本通用样式 -->
+	<link rel="stylesheet/less" href="css/base.less">
+	<!-- 自己的样式 -->
+	<link rel="stylesheet/less" href="css/entry.less">
+	<!-- Less转化 -->
+	<script src="lib/less/less.js"></script>
+	<title>慢慢买比价网--手机版</title>
+</head>
+
+<body>
+	<!-- 页面主容器 -->
+	<div class="layout">
+        <!--头部-->
+        <header class="clearfix" id="header">
+            <div class="logo fl">
+                <a href='index.html'>
+                    <img src="images/header_logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="download fr">
+                <a href='#'>
+                    <img src="images/header_app.png" alt="下载app">
+                </a>
+            </div>
+        </header>
+        <!--搜索-->
+        <div class="search-index">
+            <div class="text"><input type="search" placeholder="请输入你想比价的商品"></div>
+            <div class="button"><input type="button" value="搜索"></div>
+        </div>
+        <!--主体部分-->
+        <main>
+            <form action="#">
+                <input type="text" placeholder="请输入用户名" class="inputs et_null">
+                <p class="et_prompt">用户名不能为空，请输入!</p>
+                <input type="password" class="inputs et_null" placeholder="密码(6-20个字符)">
+                <p class="et_prompt">密码不能为空，请输入!</p>
+                <input type="tel" class="inputs" id='et_tel' placeholder="请输入手机号">
+                <div class="getCode">
+                    <div class="img"><img src="images/CheckCode.png" alt=""></div>
+                    <input type="text" id='et_num'>
+                    <input type="button" id='et_getCode' value='获取手机验证码'>
+                </div>
+                <p class="et_prompt" id='et_ifCode'>正在测验验证码是否有效</p>
+                <input type="text" placeholder="请输入手机验证码" id='et_phone' class="inputs">
+                <input type="email" placeholder="请输入邮箱" class="inputs et_null">
+                <p class="et_prompt">邮箱不能为空，请输入!</p>
+                <input type="submit" value='注册' class="inputs submit">
+            </form>
+            <p>忘记密码：请电脑登录www.manmanbuy.com找回</p>
+        </main>
+        <!--底部-->
+        <footer>
+            <ul class="links clearfix">
+                <li><a href="entry.html">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</a></li>
+            </ul>
+            <div class="txt">
+                <a href="#">手机app下载</a><a href="#">慢慢买手机版</a>--掌上比价平台<br>
+                m.manmanbuy.com
+            </div>
+            <div class="fixed">
+				<div class="left fl">
+					<div class="img fl" id='fixed_close'><img src="images/关闭.png" width="21" alt=""></div>
+					<div class="icon fl"></div>
+					<p>慢慢买</p>
+					<p>全网比价,查历史价格</p>
+				</div>
+				<div class="right fr"><a href="http://m.manmanbuy.com/?o=download">立即打开</a></div>
+			</div>
+        </footer>
+	</div>
+
+
+	<!-- jQuery 框架 -->
+	<script src='lib/jquery/jquery.js'></script>
+	<!-- bootstrap 框架 -->
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<!-- templete模板引擎 -->
+	<script src="lib/artTemplate-master/template.js"></script>
+	<!-- 自己的JS -->
+    <script src="js/entry.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- bootstrap样式 -->
+	<!--<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">-->
+	<!-- 基本通用样式 -->
+	<link rel="stylesheet/less" href="css/base.less">
+	<!-- 自己的样式 -->
+	<link rel="stylesheet/less" href='css/moneyproduct.less'>
+	<!-- Less转化 -->
+	<script src="lib/less/less.js"></script>
+	<title>慢慢买</title>
+</head>
+
+<body>
+	<!-- 页面主容器 -->
+	<div class="layout">
+         <!--顶部LOGO-->
+		<header id='header'>
+			<div class="back fl">
+				<a href="moneyctrl.html"></a>
+			</div>
+			<div class="header_app fr">
+				<a href="#"><img src="images\header_app.png" alt=""></a>
+			</div>
+			<h1>国内折扣</h1>
+		</header>  
+		<div class="container">
+         
+
+
+		</div>
+		
+
+
+        <!--底部-->
+        <div id="footer">
+            <div class="foot_nav">
+                <a href="entry.html" class="login fl">登录</a>
+                <a href="register.html" class='register fl'>注册</a>
+                <a href="#header" class="back_top fl">
+                    <img src="images/top.jpg" alt="">返回顶部</a>
+            </div>
+            <div class="footer_bottom">
+                <p class="app_name"><a href="#">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+                <p class="website"><a href="#">m.manmanbuy.com </a></p>
+            </div>
+        </div>
+	</div>
+
+	<script type="text/html" id='shopTem'>
+		{{each result as value}}
+			 <div id='shop_info'>
+				<div class="shop_title">
+					<h3>{{value.productName}}</h3>
+					<p><span>{{value.productFrom}}</span> <span>{{value.productTime}}</span> <span>{{value.productTips}}</span></p>
+				</div>
+				<div class="shop_detail">
+						{{#value.productImgSm}}
+						<p>{{value.productInfo}}</p>
+						<p><br></p>
+						<p>{{value.productInfo1}}</p>
+				</div>
+				<div class="bigImg">
+					{{#value.productImgSm}}
+				</div>
+				<div class="shop_source">
+					{{#value.productCity}}
+				</div>
+				<div class="shop_buy">
+					<a href="#">前往购买</a>
+				</div>
+				{{#value.productComment}}
+		    </div>
+		{{/each}}
+	</script>
+	<!-- jQuery 框架 -->
+	<script src='lib/jquery/jquery.js'></script>
+	<!-- templete模板引擎 -->
+	<script src="lib/artTemplate-master/template.js"></script>
+	<script src="js/moneyproduct.js"></script>
+	 <!-- 获取URL上的参数 -->
+	<script>
+		function GetQueryString(name)
+		{
+			var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if(r!=null)return  unescape(r[2]); return null;
+		}
+	</script>
+</body>
+</html>

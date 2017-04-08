@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- bootstrap样式 -->
+    <!--<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">-->
+    <!-- 基本通用样式 -->
+    <link rel="stylesheet/less" href="css/baseye.less">
+    <!-- 自己的样式 -->
+    <link rel="stylesheet/less" href='css/indisdetail.less'>
+    <!-- Less转化 -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入icfont.css -->
+<link rel="stylesheet" type="text/css" href="lib/fontye/iconfont.css">
+    <title>慢慢买</title>
+</head>
+
+<body>
+    <!-- 页面主容器 -->
+    <div class="layout">
+        <!--顶部LOGO-->
+        <header>
+        <div class="left fl">
+            <a href="javascript:history.go(-1)" class="ic-back iconfont icon-zuojiantou"></a>
+        </div>
+        <div class="right fr">
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="icon-app"></a>
+        </div>
+        <div class="mid">国内折扣</div>
+    </header>
+        <div class="container">
+        </div>
+        <div class="brand">
+            <ol>
+                <li><a href="index.html">首页></a></li>
+                <li><a href="inlandcount.html">国内折扣></a></li>
+                <li><a href="#" class="detail one-txt-cut"></a></li>
+            </ol>
+        </div>
+        <!--底部-->
+        <div id="footer">
+            <div class="foot_nav">
+                <a href="entry.html" class="login fl">登录</a>
+                <a href="register.html" class='register fl'>注册</a>
+                <a href="#header" class="back_top fl">
+                    <img src="images/top.jpg" alt="">返回顶部</a>
+            </div>
+            <div class="footer_bottom">
+                <p class="app_name"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+                <p class="website"><a href="#">m.manmanbuy.com </a></p>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id='shopTem'>
+        {{each result as value}}
+        <h3 class="title">{{value.productName}}</h3>
+        <h4 class="price">{{value.productPrice}}</h4>
+        <div class="info"><span class="mall">{{value.productFrom}}</span><span class="time">{{value.productTime}}</span><span class="tips">{{value.productTips}}</span></div>
+        <div class="content clearfix">
+            <div class="pic ">{{#value.productImg}}</div>
+            <div class="intro">
+                <p class="first">{{value.productInfo}}</p>
+                <p></p>
+            </div>
+            <div class="bigimg">{{#value.productImg}}
+                <p></p>
+            </div>
+            <div class="golink">
+                <a href="#">
+                    <i>前往购买</i>
+                </a>
+            </div>
+            <div class="comment"> <span class="word">还可输入<i>140</i>字</span>{{#value.productComment}}</div>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/html" id="comment">
+        {{if result}} {{each result as value}}
+        <li class="ui-border-b">
+            <div class="userimg"><img src="images/none.gif"></div>
+            <div class="con">
+                <div class="name clearfix">
+                    <div class="username">手机端网友101***23</div>
+                    <div class="time">2017/4/2 10:22:12</div>
+                </div>
+                <div class="content">xxx</div>
+                <input type="button" value="删除">
+            </div>
+        </li>
+        {{/each}} {{/if}}
+    </script>
+    <!-- jQuery 框架 -->
+    <script src='lib/jquery/jquery.js'></script>
+    <!-- templete模板引擎 -->
+    <script src="lib/artTemplate-master/template.js"></script>
+    <script src="js/indisdetail.js"></script>
+    <!-- 获取URL上的参数 -->
+    <!-- 	<script>
+	function GetQueryString(name)
+	{
+		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r!=null)return  unescape(r[2]); return null;
+	}
+</script> -->
+</body>
+
+</html>

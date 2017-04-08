@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- 基本通用样式 -->
+  <link rel="stylesheet/less" href="css/base.less">
+  <!-- 自己的样式 -->
+  <link rel="stylesheet/less" href="css/brand_list.less">
+  <!-- Less转化 -->
+  <script src="lib/less/less.js"></script>
+  <title>慢慢买</title>
+</head>
+<body>
+  <!-- 页面主容器 -->
+  <div class="layout">
+    <!--顶部LOGO-->
+    <header id='header'>
+      <div class="header_logo fl">
+        <a href="#"><img src="images/header_logo.png" alt=""></a>
+      </div>
+      <div class="header_app fr">
+        <a href="#"><img src="images\header_app.png" alt=""></a>
+      </div>
+    </header>
+   <!--搜索框-->
+    <div id='search'>
+      <form action="#">
+        <input type="text" name="search" placeholder="请输入你想比价的商品">
+        <input type="submit" value='搜索' id='inquire'>
+      </form>
+    </div>
+    <!-- 链式导航栏 -->
+    <div class="nav">
+      <a href="index.html">首页</a>><a href="brandTitle.html">品牌大全</a>
+    </div>
+     <div class="main">
+          <!-- 牌子排名 -->
+          <div class="model">
+             <div class="hd">
+               <h3></h3>
+             </div>
+             <div class="goodbrand">
+                <ul>
+                 
+                 
+                </ul>
+             </div>
+          </div>
+          <!-- 销量 -->
+          <div class="model">
+                 <div class="hd">
+                   <h3></h3>
+                 </div>
+                 <div class="salenum">
+                    <ul>
+                     
+                    </ul>
+                 </div>
+            </div>
+         <!-- 评论-->
+          <div class="model">
+                 <div class="hd">
+                   <h3></h3>
+                 </div>
+                 <div class="comment">
+                    <ul>
+                          <li>
+                          <a href="#">
+                            <div class="pic">
+                              <img src="images/conPic.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <div class="tit">康佳(KONKA) A55U 55英寸智能4K安卓平板led液晶电视</div>   
+                            </div>
+                          </a>
+                            <div class="con">
+                                <div class="name clearfix">
+                                    <span class="conName fl">s***跑：</span><span class="conTime fr">2017/3/30</span>
+                                </div>
+                                <div class="content">
+                                    特别特别生气，上门安装收80块，安装人员只把电视从箱子里拿出来插上电这就80了，这钱转的也实在太黑了吧
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                 </div>
+            </div>
+     </div>
+    <!--底部-->
+    <div id="footer">
+      <div class="foot_nav">
+        <a href="#" class="login fl">登录</a>
+        <a href="#" class='register fl'>注册</a>
+        <a href="#header" class="back_top fl">
+          <img src="images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <div class="footer_bottom">
+        <p class="app_name"><a href="#">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+        <p class="website"><a href="#">m.manmanbuy.com </a></p>
+        </div>
+    </div>
+</div>
+
+<!--牌子排名模板-->
+    <script type="text/html" id='goodbrandTep'>
+    {{each result as value i}}
+     <li>
+        <a href="#">
+          <em>{{i+1}}</em>
+          <div class="con">
+           <div class="tit">{{value.brandName}}</div>
+            <p>{{value.brandInfo}}</p>
+          </div>
+        </a>
+    </li>
+    {{/each}}
+    </script>
+    <!--销量 模板-->
+    <script type="text/html" id='salenumTep'>
+    {{each result as value i}}
+     <li>
+        <a href="productDetail.html?productid={{value.productId}}">
+          <div class="pic">
+            {{#value.productImg}}
+          </div>
+          <div class="info">
+              <div class="tit">{{value.productName}}</div>
+              <div class="price">
+                <em>{{value.productPrice}}</em>
+              </div>
+              <div class="other">
+                <span>{{value.productQuote}} </span>  <span> 全网评{{value.productCom}}</span>
+              </div>
+          </div>
+        </a>
+      </li>
+    {{/each}}
+    </script>
+
+
+
+
+
+
+
+  <!-- jQuery 框架 -->
+  <script src='lib/jquery/jquery.js'></script>
+  <!-- templete模板引擎 -->
+  <script src="lib/artTemplate-master/template.js"></script>
+  <!-- 自己的JS -->
+  <script src='js/brand_list.js'></script>
+  <!-- 获取URL上的参数 -->
+  <script>
+      function GetQueryString(name)
+      {
+           var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+           var r = window.location.search.substr(1).match(reg);
+           if(r!=null)return  unescape(r[2]); return null;
+      }
+  </script>
+</body>
+</html>
